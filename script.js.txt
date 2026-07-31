@@ -1,0 +1,5 @@
+// script.js
+
+function nextPage() {
+    window.location.href = "surprise.html";
+}
