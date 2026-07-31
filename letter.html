@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Surprise For You ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4b6e,#ff9a9e);
+    overflow:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:750px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+}
+
+h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+h2{
+    margin-bottom:20px;
+}
+
+p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    background:white;
+    color:#ff4b6e;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:20px;
+    animation:float 6s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>💖 Surprise! 💖</h1>
+
+<h2>Happy Girlfriend Day ❤️</h2>
+
+<p>
+From the moment you came into my life,
+everything became brighter.
+
+Thank you for every smile,
+every laugh,
+and every beautiful memory.
+
+No matter where life takes us,
+I hope we always have reasons to smile together.
+
+You are truly special to me.
+
+❤️ Happy Girlfriend Day ❤️
+</p>
+
+<button onclick="showMessage()">
+One Last Surprise 🌹
+</button>
+
+<h2 id="love"></h2>
+
+</div>
+
+<script>
+function showMessage(){
+document.getElementById("love").innerHTML =
+"💍 I Love You More Than Words Can Say ❤️";
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(15+Math.random()*30)+"px";
+
+heart.style.animationDuration=(3+Math.random()*4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
