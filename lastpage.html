@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow-x:hidden;
+    background:linear-gradient(135deg,#EAF8FF,#FFD6E7,#FFF5FA);
+    padding:30px;
+}
+
+.card{
+    width:90%;
+    max-width:850px;
+    background:#FFD6E7;
+    padding:45px;
+    border-radius:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+    text-align:center;
+}
+
+
+h1{
+    font-size:45px;
+    color:#ff4d8d;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#ff6f9f;
+    font-weight:400;
+    margin-bottom:30px;
+}
+
+
+.photo{
+    width:280px;
+    height:280px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    margin-bottom:30px;
+}
+
+
+p{
+    text-align:left;
+    color:#000;
+    font-size:19px;
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+
+.signature{
+    text-align:right;
+    font-size:24px;
+    margin-top:30px;
+    color:#ff4d8d;
+}
+
+
+.heart{
+    position:fixed;
+    top:-10%;
+    z-index:1;
+    animation:fall linear forwards;
+}
+
+
+@keyframes fall{
+    to{
+        transform:translateY(120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="card">
+
+<h1>💖 Our Memories</h1>
+
+<h2>Every Moment With You Is Special ❤️</h2>
+
+
+<img src="our-photo.jpg" class="photo">
+
+
+<p>
+<b>Dear My Puchuuu, 💕</b>
+</p>
+
+
+<p>
+I just wanted to create this little place to remind you how special you are to me. Every smile, every conversation, and every little moment we share becomes a beautiful memory that I never want to forget.
+</p>
+
+
+<p>
+You bring happiness into my life in ways you probably don't even realize. Your smile can make my worst days better, and your presence makes ordinary moments feel magical.
+</p>
+
+
+<p>
+Looking at our memories reminds me how lucky I am to have someone like you. The laughs we shared, the silly moments, and the little things we do together are all precious to me.
+</p>
+
+
+<p>
+I hope we continue creating many more memories together — more smiles, more laughter, more adventures, and more moments that we can look back on someday and smile.
+</p>
+
+
+<p>
+No matter what happens, I want you to know that you are someone very important to me. Thank you for being a beautiful part of my life and for making my days brighter. ❤️
+</p>
+
+
+<p>
+This page is just a small reminder that you are special, loved, and appreciated. 💖
+</p>
+
+
+<div class="signature">
+Forever Yours ❤️
+</div>
+
+
+</div>
+
+
+
+<script>
+
+function hearts(){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="💖";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.fontSize=(18+Math.random()*20)+"px";
+
+h.style.animationDuration=(6+Math.random()*5)+"s";
+
+document.body.appendChild(h);
+
+setTimeout(()=>h.remove(),12000);
+
+}
+
+setInterval(hearts,400);
+
+</script>
+
+
+</body>
+</html>
